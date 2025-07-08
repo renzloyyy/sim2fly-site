@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>AIS SIM2Fly</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #goTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      font-size: 1.8rem;
+      border: none;
+      outline: none;
+      background-color: #0a9396;
+      color: white;
+      cursor: pointer;
+      padding: 0.75rem 1rem;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s;
+    }
+
+    #goTopBtn:hover {
+      background-color: #00777c;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="#">AIS <span>SIM2Fly</span></a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <span><i class="ri-menu-line"></i></span>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="#packages">Package</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="header__container">
+    <div class="header__image">
+      <div class="header__image__card header__image__card-1">
+        <span><i class="ri-sim-card-line"></i></span>
+        SIM2Fly SIM (Asia/Global)
+      </div>
+      <div class="header__image__card header__image__card-2">
+        <span><i class="ri-refresh-line"></i></span>
+        Easy Top-Up
+      </div>
+      <div class="header__image__card header__image__card-3">
+        <span><i class="ri-earth-line"></i></span>
+        100+ Countries Supported
+      </div>
+      <div class="header__image__card header__image__card-4">
+        <span><i class="ri-customer-service-2-line"></i></span>
+        24/7 Support
+      </div>
+      <img src="assets/header.png" alt="header" />
+    </div>
+
+    <div class="header__content">
+      <h1>STAY CONNECTED<br />WITH <span>SIM2FLY</span> WORLDWIDE</h1>
+      <p>
+        AIS SIM2Fly (Asia/Global) SIM Card and Top-Up Loader – Travel with
+        peace of mind and high-speed data across over 100 countries. Stay in
+        touch with your loved ones, enjoy seamless internet, and reload your
+        SIM2Fly anytime, anywhere.
+      </p>
+    </div>
+  </header>
+
+  <section class="reviews__section">
+    <h2>Customer Testimonials</h2>
+    <div class="reviews__container">
+      <div class="review__card">
+        <p class="review__quote">
+          “Very accommodating and fast transaction. Legit and keeps updating about the transaction.”<br />
+          <em>— Aubrey Cabañog</em>
+        </p>
+      </div>
+      <div class="review__card">
+        <p class="review__quote">
+          “Service is HIGHLY recommended. The seller is trustworthy and responsive.”<br />
+          <em>— Mariepet Acantilado Cristuta-Agustines</em>
+        </p>
+      </div>
+      <div class="review__card">
+        <p class="review__quote">
+          “✅✅✅✅✅ Legit Top-Up Loader!”<br />
+          <em>— YvAn Van</em>
+        </p>
+      </div>
+      <div class="review__card">
+        <p class="review__quote">
+          “Thank you AIS Sim Seafarers<br />#fast<br />#legit<br />#friendly”<br />
+          <em>— Ruby Ann Borongan</em>
+        </p>
+      </div>
+      <div class="review__card">
+        <p class="review__quote">
+          “Fast and legit! Thank you AIS Sim Seafarers!”<br />
+          <em>— Jie Conturno-Wahid</em>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="packages__section" id="packages">
+    <h2>Available Packages</h2>
+    <div class="packages__container">
+      <div class="package__card">
+        <h3>Asia SIM2Fly</h3>
+        <p>Enjoy high-speed data across 30+ Asian countries. Perfect for regional travelers.</p>
+        <ul>
+          <li>6GB Data</li>
+          <li>8 Days Validity</li>
+          <li>Plug & Play SIM</li>
+        </ul>
+        <button class="btn">Buy Now</button>
+      </div>
+
+      <div class="package__card">
+        <h3>Global SIM2Fly</h3>
+        <p>Stay connected in over 100 countries worldwide – ideal for international adventures.</p>
+        <ul>
+          <li>6GB Data</li>
+          <li>15 Days Validity</li>
+          <li>Works Globally</li>
+        </ul>
+        <button class="btn">Buy Now</button>
+      </div>
+
+      <div class="package__card">
+        <h3>eSIM Activation</h3>
+        <p>No physical SIM? No problem. Activate your SIM2Fly with an instant eSIM.</p>
+        <ul>
+          <li>QR Code Delivery</li>
+          <li>Instant Setup</li>
+          <li>Asia or Global Plans</li>
+        </ul>
+        <button class="btn">Activate</button>
+      </div>
+
+      <div class="package__card">
+        <h3>Top-Up Services</h3>
+        <p>Already have SIM2Fly? Reload anytime with our secure and fast top-up service.</p>
+        <ul>
+          <li>Fast Reload</li>
+          <li>24/7 Availability</li>
+          <li>Multiple Payment Options</li>
+        </ul>
+        <button class="btn">Top-Up Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="about__section" id="about">
+    <div class="about__container">
+      <h2>About Us</h2>
+      <p>
+        We are a trusted SIM2Fly loader and provider helping travelers stay connected across Asia and the globe.
+        Our mission is to deliver fast, secure, and affordable SIM and top-up services to seafarers, tourists, and remote workers worldwide.
+      </p>
+      <p>
+        Whether you're going on vacation, a business trip, or heading out to sea, we make sure you stay in touch with your loved ones with reliable high-speed data and 24/7 support. 
+      </p>
+      <p>
+        Join thousands of satisfied customers who rely on us for legit transactions, responsive service, and smooth global roaming.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer__container" id="contact">
+    <div class="footer__content">
+      <h2>Contact Us</h2>
+      <p>For inquiries, support, or feedback, reach out to us via:</p>
+      <ul>
+        <li>Email: <a href="mailto:kingthur0329@gmail.com">kingthur0329@gmail.com</a></li>
+        <li>Phone: <a href="tel:+639773784967">+63 977 378 4967</a></li>
+        <li>Facebook: <a href="https://www.facebook.com/aistopuploader" target="_blank">AIS Sim Seafarers - Top Up Load</a></li>
+      </ul>
+    </div>
+    <div class="bar">
+      Copyright © 2025 AIS SIM2Fly. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ScrollReveal and Custom Scripts -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
+
+  <!-- Go to Top Button -->
+  <button id="goTopBtn" title="Go to top">
+    <i class="ri-arrow-up-s-line"></i>
+  </button>
+
+  <!-- JS for Go to Top Button -->
+  <script>
+    const goTopBtn = document.getElementById("goTopBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        goTopBtn.style.display = "block";
+      } else {
+        goTopBtn.style.display = "none";
+      }
+    };
+    goTopBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+</body>
+</html>
