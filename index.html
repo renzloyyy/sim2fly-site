@@ -32,6 +32,101 @@
     #goTopBtn:hover {
       background-color: #00777c;
     }
+
+    .rates__section {
+      padding: 2rem;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .rates__section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #0a9396;
+    }
+
+    .rates__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .rates__card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      text-align: left;
+    }
+
+    .rates__card h3 {
+      color: #00777c;
+      margin-bottom: 1rem;
+    }
+
+    .rates__card ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .rates__card ul li {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.modal__content {
+  background: #ffffff;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: slideDown 0.3s ease;
+}
+
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.8rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal__close:hover {
+  color: #0a9396;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -83,6 +178,62 @@
     </div>
   </header>
 
+<section class="packages__section" id="packages">
+  <h2>Available Packages</h2>
+  <div class="packages__container">
+    <div class="package__card">
+      <h3>Asia SIM2Fly</h3>
+      <p>High-speed data for 2–10 days across 30+ Asian countries.</p>
+      <ul>
+        <li>Up to 8GB Data</li>
+        <li>Valid for up to 10 Days</li>
+        <li>Affordable prepaid options</li>
+      </ul>
+      <button class="btn" onclick="openModal('asia')">See Rates</button>
+    </div>
+
+    <div class="package__card">
+      <h3>Global SIM2Fly</h3>
+      <p>Roam across 100+ countries with prepaid global data.</p>
+      <ul>
+        <li>Up to 15GB Data</li>
+        <li>Valid for up to 1 Year</li>
+        <li>Reliable global coverage</li>
+      </ul>
+      <button class="btn" onclick="openModal('global')">See Rates</button>
+    </div>
+
+    <div class="package__card">
+      <h3>eSIM Activation</h3>
+      <p>Instant eSIM for travelers with compatible devices.</p>
+      <ul>
+        <li>Asia or Global Plans</li>
+        <li>QR Code Activation</li>
+        <li>No shipping needed</li>
+      </ul>
+      <button class="btn" onclick="openModal('esim')">Click Me</button>
+    </div>
+
+    <div class="package__card">
+      <h3>Top-Up Services</h3>
+      <p>Fast and secure reloads for your active SIM2Fly.</p>
+      <ul>
+        <li>Flexible Top-Up Amounts</li>
+        <li>24/7 Availability</li>
+        <li>Personalized Requests</li>
+      </ul>
+      <button class="btn" onclick="openModal('topup')">Click Me</button>
+    </div>
+  </div>
+</section>
+
+<div id="modal" class="modal">
+  <div class="modal__content" onclick="event.stopPropagation()">
+    <span class="modal__close" onclick="closeModal()">&times;</span>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
   <section class="reviews__section">
     <h2>Customer Testimonials</h2>
     <div class="reviews__container">
@@ -119,55 +270,6 @@
     </div>
   </section>
 
-  <section class="packages__section" id="packages">
-    <h2>Available Packages</h2>
-    <div class="packages__container">
-      <div class="package__card">
-        <h3>Asia SIM2Fly</h3>
-        <p>Enjoy high-speed data across 30+ Asian countries. Perfect for regional travelers.</p>
-        <ul>
-          <li>6GB Data</li>
-          <li>8 Days Validity</li>
-          <li>Plug & Play SIM</li>
-        </ul>
-        <button class="btn">Buy Now</button>
-      </div>
-
-      <div class="package__card">
-        <h3>Global SIM2Fly</h3>
-        <p>Stay connected in over 100 countries worldwide – ideal for international adventures.</p>
-        <ul>
-          <li>6GB Data</li>
-          <li>15 Days Validity</li>
-          <li>Works Globally</li>
-        </ul>
-        <button class="btn">Buy Now</button>
-      </div>
-
-      <div class="package__card">
-        <h3>eSIM Activation</h3>
-        <p>No physical SIM? No problem. Activate your SIM2Fly with an instant eSIM.</p>
-        <ul>
-          <li>QR Code Delivery</li>
-          <li>Instant Setup</li>
-          <li>Asia or Global Plans</li>
-        </ul>
-        <button class="btn">Activate</button>
-      </div>
-
-      <div class="package__card">
-        <h3>Top-Up Services</h3>
-        <p>Already have SIM2Fly? Reload anytime with our secure and fast top-up service.</p>
-        <ul>
-          <li>Fast Reload</li>
-          <li>24/7 Availability</li>
-          <li>Multiple Payment Options</li>
-        </ul>
-        <button class="btn">Top-Up Now</button>
-      </div>
-    </div>
-  </section>
-
   <section class="about__section" id="about">
     <div class="about__container">
       <h2>About Us</h2>
@@ -176,7 +278,7 @@
         Our mission is to deliver fast, secure, and affordable SIM and top-up services to seafarers, tourists, and remote workers worldwide.
       </p>
       <p>
-        Whether you're going on vacation, a business trip, or heading out to sea, we make sure you stay in touch with your loved ones with reliable high-speed data and 24/7 support. 
+        Whether you're going on vacation, a business trip, or heading out to sea, we make sure you stay in touch with your loved ones with reliable high-speed data and 24/7 support.
       </p>
       <p>
         Join thousands of satisfied customers who rely on us for legit transactions, responsive service, and smooth global roaming.
@@ -198,14 +300,12 @@
       Copyright © 2025 AIS SIM2Fly. All rights reserved.
     </div>
   </footer>
-
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="main.js"></script>
 
   <button id="goTopBtn" title="Go to top">
     <i class="ri-arrow-up-s-line"></i>
   </button>
-
   <script>
     const goTopBtn = document.getElementById("goTopBtn");
     window.onscroll = function () {
@@ -219,5 +319,80 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
   </script>
+  <script>
+  function openModal(type) {
+    const modal = document.getElementById('modal');
+    const content = document.getElementById('modal-content');
+    let html = '';
+    const fbBtn = `
+      <div style="margin-top: 1.5rem; text-align: center;">
+        <a href="https://www.facebook.com/kaycee.ais.1" target="_blank" style="
+          display: inline-block;
+          padding: 0.6rem 1.2rem;
+          background-color: #0a9396;
+          color: #fff;
+          border-radius: 0.5rem;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background 0.3s;
+        " onmouseover="this.style.backgroundColor='#00777c'" onmouseout="this.style.backgroundColor='#0a9396'">
+          Message Us to Avail
+        </a>
+      </div>
+    `;
+
+    switch(type) {
+      case 'asia':
+        html = `
+          <h3 style="color:#0a9396;">Asia SIM2Fly Rates</h3>
+          <ul>
+            <li>1GB – 2 Days – ₱260</li>
+            <li>3GB – 3 Days – ₱440</li>
+            <li>4GB – 8 Days – ₱590</li>
+            <li>6GB – 10 Days – ₱690</li>
+            <li>8GB – 10 Days – ₱950</li>
+          </ul>` + fbBtn;
+        break;
+      case 'global':
+        html = `
+          <h3 style="color:#0a9396;">Global SIM2Fly Rates</h3>
+          <ul>
+            <li>1GB – 3 Days – ₱590</li>
+            <li>3GB – 7 Days – ₱1,020</li>
+            <li>4GB – 7 Days – ₱1,250</li>
+            <li>4GB – 15 Days – ₱1,520</li>
+            <li>6GB – 15 Days – ₱1,620</li>
+            <li>8GB – 15 Days – ₱1,970</li>
+            <li>15GB – 30 Days – ₱3,850</li>
+            <li>15GB – 1 Year Validity – ₱4,950</li>
+          </ul>` + fbBtn;
+        break;
+      case 'esim':
+        html = `
+          <h3 style="color:#0a9396;">eSIM Activation Plans</h3>
+          <p>Available for Asia and Global SIM2Fly packages.</p>
+          <p>Rates are the same as standard SIM cards.</p>` + fbBtn;
+        break;
+      case 'topup':
+        html = `
+          <h3 style="color:#0a9396;">Top-Up Services</h3>
+          <p>Reload your existing SIM2Fly.</p>
+          <p>Custom top-up rates and packages available upon request.</p>` + fbBtn;
+        break;
+      default:
+        html = '<p>No rates available.</p>';
+    }
+
+    content.innerHTML = html;
+    modal.style.display = 'flex';
+
+    modal.onclick = () => closeModal();
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
+  }
+</script>
 </body>
 </html>
